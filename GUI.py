@@ -7,7 +7,7 @@ try:
     with open('installed.txt', 'r') as file:
         version = file.read()
 except FileNotFoundError:
-    print("SyncKing-Kong does not appear to have installed correctly.")
+    print("lipsync-lab does not appear to have installed correctly.")
     print("Please try to install it again.")
     print("https://github.com/anothermartz/Easy-Wav2Lip/issues")
     input()
@@ -57,7 +57,7 @@ def validate_frame_preview(P):
         pass
     return False
 
-def start_syncking_kong():
+def start_lipsync_lab():
     print("Saving config")
     config["OPTIONS"]["video_file"] = str(video_file_var.get())
     config["OPTIONS"]["vocal_file"] = str(vocal_file_var.get())
@@ -87,7 +87,7 @@ def start_syncking_kong():
     # Add your logic here
 
 root = tk.Tk()
-root.title("SyncKing-Kong GUI")
+root.title("lipsync-lab GUI")
 root.geometry("800x720")
 root.configure(bg="lightblue")
 
@@ -180,7 +180,7 @@ row+=1
 output_suffix_label = tk.Label(root, text="Output File Suffix:", bg="lightblue")
 output_suffix_label.grid(row=row, column=0, sticky="e")
 output_suffix_var = tk.StringVar()
-output_suffix_var.set(config["OTHER"].get("output_suffix", "_SyncKing-Kong"))
+output_suffix_var.set(config["OTHER"].get("output_suffix", "_lipsync-lab"))
 output_suffix_entry = output_suffix_entry = tk.Entry(root, textvariable=output_suffix_var, width=20)
 output_suffix_entry.grid(row=row, column=1, sticky="w")
 
@@ -213,9 +213,9 @@ preview_window_dropdown.grid(row=row, column=1, sticky="w")
 row+=1
 tk.Label(root, text="", bg="lightblue").grid(row=row, column=0, sticky="w")
 
-# Button to start SyncKing-Kong
+# Button to start lipsync-lab
 row+=1
-start_button = tk.Button(root, text="Start SyncKing-Kong", command=start_syncking_kong, bg="#5af269", font=("Arial", 16))
+start_button = tk.Button(root, text="Start lipsync-lab", command=start_lipsync_lab, bg="#5af269", font=("Arial", 16))
 start_button.grid(row=row, column=0, sticky="w", padx=290, columnspan=2)
 
 row+=1
